@@ -1,0 +1,17 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Env files
+.env
+.env.local
+backend/.env
+frontend/.env
+
+# SQLite DB
+*.sqlite
+
+# Build outputs
+frontend/dist/
+backend/logs/

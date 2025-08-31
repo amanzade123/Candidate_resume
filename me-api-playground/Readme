@@ -1,0 +1,75 @@
+# Candidate Profiles — Fullstack (Node.js/Express + React/Tailwind)
+
+## Project Overview
+
+This repository contains a small fullstack application for managing candidate profiles.
+
+**Architecture**
+
+* **Backend**: Node.js + Express + SQLite
+
+  * REST APIs for profile CRUD
+  * Basic Auth for write operations
+  * Logging with morgan
+  * Rate limiting middleware
+  * Pagination support
+* **Frontend**: React + Tailwind
+
+  * Displays candidate profiles
+  * `ProfileEditor` for logged-in user
+  * `DebugPanel` (API logs, pagination/auth tests)
+
+---
+
+## Contents
+
+* `backend/` — Express server, SQLite DB, seed script
+* `frontend/` — React + Tailwind app
+
+---
+
+## Prerequisites
+
+* Node.js (>= 18 recommended)
+* npm (or yarn)
+* (For production deployments) a VPS or hosting provider, Nginx (optional), Docker (optional)
+
+---
+
+## Quick Start (local)
+
+From project root:
+
+```bash
+# backend
+cd backend
+npm install
+# create env file
+cp .env.example .env
+# seed DB (creates database.sqlite)
+node seed.js      # runs once to create sample data (edit seed.js if you want different sample data)
+node server.js    # starts backend (default: PORT=3000)
+
+# in another terminal: frontend
+cd frontend
+npm install
+npm run dev       # starts the React dev server (default: http://localhost:5173 or similar)
+```
+
+Open frontend URL in browser. The frontend expects the backend API base URL — make sure `.env` or frontend config points to the running backend.
+
+---
+
+
+
+In `frontend`, create `.env` or update the built config if needed:
+
+
+---
+## Testing
+cd backend
+npm test
+
+## ResumeLink-
+https://drive.google.com/file/d/1uqUwWpyvWbOp4tDWu-bRwNIDbaEbZI64/view?usp=drive_link
+

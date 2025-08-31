@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  api:
+    build: ./backend
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./backend:/app
+      - dbdata:/app/database.sqlite
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=sqlite:./database.sqlite
+volumes:
+  dbdata:
